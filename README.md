@@ -1,24 +1,28 @@
-# README
+## Calendar App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Rails API for a simple calendar event managing app.
 
-Things you may want to cover:
+**Technologies:**
 
-* Ruby version
+* Ruby on Rails 5.1.6
 
-* System dependencies
+**API:**
 
-* Configuration
+* [POST] /api/events
+  * Create a new event with the below params:
+    * Title (string)
+    * Description (string)
+    * Start (datetime)
+    * End (datetime)
 
-* Database creation
 
-* Database initialization
+* [GET] /api/events
+  * Return all events the user has on the calendar.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+* [DELETE] /api/events/:id
+  * Deletes an event
 
-* Deployment instructions
 
-* ...
+* [PATCH/PUT] /api/events/:id
+  * Update an existing event
