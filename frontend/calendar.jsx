@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import configureStore from './store/store'
+import configureStore from './store/store'
 // import Root from './components/root';
 // import { login, signup, logout } from './util/session_api_util';
 
@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // TESTING START
 ReactDOM.render(<h1>entry file</h1>, root);
-// const store = configureStore();
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+const store = configureStore();
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
   // window.login = login
   // window.logout = logout
   // window.fetchProject = fetchProject;
