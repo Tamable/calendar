@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import configureStore from './store/store'
-// import Root from './components/root';
+import Root from './components/root';
 // import { login, signup, logout } from './util/session_api_util';
-
+import { login } from './actions/session_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -24,16 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
 
 // TESTING START
-ReactDOM.render(<h1>entry file</h1>, root);
+// ReactDOM.render(<h1>entry file</h1>, root);
 const store = configureStore();
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  // window.login = login
+  window.login = login
   // window.logout = logout
   // window.fetchProject = fetchProject;
   // window.fetchProjects = fetchProjects;
   // window.fetchCategory = fetchCategory;
 //TESTING END
 
-  // ReactDOM.render(<Root store={store} />, root);
+  ReactDOM.render(<Root store={store} />, root);
 })

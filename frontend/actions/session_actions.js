@@ -9,7 +9,7 @@ export const login = (user) => {
     return APIUtil.login(user).then((user) => {
       return dispatch(receiveCurrentUser(user));
       return user;
-    }, (error) => {
+    }, (err) => {
       return dispatch(receiveErrors(err.responseJSON))
     })
   }
@@ -28,7 +28,7 @@ export const signup = (user) => {
     return APIUtil.signup(user).then((user) => {
       return dispatch(receiveCurrentUser(user));
       return user;
-    }, (error) => {
+    }, (err) => {
       return dispatch(receiveErrors(err.responseJSON))
     })
   }
