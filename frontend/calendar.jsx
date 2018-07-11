@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store'
 import Root from './components/root';
 // import { login, signup, logout } from './util/session_api_util';
-import { login } from './actions/session_actions'
+import { login } from './actions/session_actions';
+import { fetchEvents } from './util/event_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -30,9 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.login = login
   // window.logout = logout
-  // window.fetchProject = fetchProject;
-  // window.fetchProjects = fetchProjects;
-  // window.fetchCategory = fetchCategory;
+  window.fetchEvents = fetchEvents;
 //TESTING END
 
   ReactDOM.render(<Root store={store} />, root);
